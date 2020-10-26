@@ -1,0 +1,19 @@
+<h2>Cansultar livro</h2>
+    <mat-accordion>
+        
+        <mat-expansion-panel *ngFor='let livro of lista'>
+
+            <mat-expansion-panel-header>
+               Código: {{livro.id}}
+            </mat-expansion-panel-header>
+            <p>Título: {{livro.titulo}}</p>
+            <p>Escritor: {{livro.autor}}</p>
+            <p>Quantidade de Paginas: {{livro.paginas}}</p>
+          
+        </mat-expansion-panel>
+
+    </mat-accordion>
+
+    <p *ngIf="lista.length <= 0">Nenhum livro encontrado</p>
+
+    
